@@ -3,7 +3,7 @@ import footer_logo from '@/assets/logos/footer_logo.svg';
 </script>
 
 <template>
-  <footer class="footer lg:px-[30px] md:px-[20px] px-[10px] font-[500] text-[18px]">
+  <footer class="footer lg:px-[30px] md:px-[20px] px-[10px] font-[500] text-[18px] my-10">
     <div
       class="footer_content flex flex-wrap gap-8 items-start lg:justify-between md:justify-between justify-center min-h-[450px]">
       <div class="footer_content_efl lg:max-w-[30%] md:max-w-[400px] w-full">
