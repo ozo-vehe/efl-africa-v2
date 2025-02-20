@@ -35,7 +35,7 @@
     </section>
 
     <!-- Image Gallery Section -->
-    <section class="gallery_section relative lg:px-10 md:px-5 px-4 py-16 border-y border-gray-400">
+    <section class="gallery_section relative lg:px-10 md:px-5 px-4 pt-16 pb-12 border-y border-gray-400">
       <div class="image_container grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10">
         <div v-for="image in gallery" :key="image.id" class="image rounded-[16px]">
           <img :src="image.image" :alt="`Image number ${image.id}`"
@@ -43,17 +43,21 @@
         </div>
       </div>
 
-      <div class="load_more_button mt-12 text-center">
+      <div class="load_more_button mt-20 text-center">
         <button type="button" aria-label="Load more button"
           class="load_more bg-gray-800 rounded-full py-3 min-w-[150px] text-gray-50 text-center font-[500]">Load
           More</button>
       </div>
     </section>
+
+    <!-- Services Section -->
+    <ServicesComponent />
   </main>
 </template>
 
 <script setup lang="ts">
 import header_image from "@/assets/gallery/01.jpg";
+import ServicesComponent from "@/components/ServicesComponent.vue";
 import { gallery } from "@/utils/gallery";
 
 </script>

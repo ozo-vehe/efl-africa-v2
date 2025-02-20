@@ -34,7 +34,7 @@ import footer_logo from '@/assets/logos/footer_logo.svg';
         <div class="company_address_one max-w-[300px]">
           <h3 class="text-gray-400 mb-2">Company Address (1/2)</h3>
           <p>Ikorodu 40/41, Ajose Bus Stop, Owode Ibeshe Road, Ikorodu, Lagos, Nigeria</p>
-          <a href="#" target="_blank" class="text-green-80 mt-2 block">Find on Map</a>
+          <a href="#" target="_blank" class="text-efl-green-80 mt-2 block">Find on Map</a>
         </div>
 
         <div class="quick_actions">
@@ -49,7 +49,7 @@ import footer_logo from '@/assets/logos/footer_logo.svg';
         <div class="company_address_two max-w-[300px]">
           <h3 class="text-gray-400 mb-2">Company Address (2/2)</h3>
           <p>Beachland (Savaric Yard, 11 creek cres, Ibafon, Lagos)</p>
-          <a href="#" target="_blank" class="text-green-80 mt-2 block">Find on Map</a>
+          <a href="#" target="_blank" class="text-efl-green-80 mt-2 block">Find on Map</a>
         </div>
       </div>
     </div>
