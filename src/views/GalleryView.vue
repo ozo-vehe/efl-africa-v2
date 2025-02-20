@@ -1,9 +1,10 @@
 <template>
   <main>
     <!-- Header Section -->
-    <section class="gallery_header_section relative flex items-center justify-center min-h-[100vh] pt-24">
+    <section
+      class="gallery_header_section relative flex items-center justify-center min-h-[100vh] pt-24 lg:px-10 md:px-5 px-4">
       <header
-        class="hero_section relative h-[80vh] w-[90%] flex lg:justify-end md:justify-center justify-center flex-col lg:px-10 md:px-5 px-4 pb-10 rounded-[32px]">
+        class="hero_section relative h-[80vh] w-full flex lg:justify-end md:justify-center justify-center flex-col lg:px-10 md:px-5 px-4 pb-10 rounded-[32px]">
         <!-- Background Image -->
         <div class="bg_image absolute top-0 left-0 w-full h-full">
           <img class="w-full h-full object-cover rounded-[32px] object-top" :src="header_image" alt="Header image" />
@@ -32,12 +33,28 @@
         </button>
       </header>
     </section>
-    Gallery
+
+    <!-- Image Gallery Section -->
+    <section class="gallery_section relative lg:px-10 md:px-5 px-4 py-16 border-y border-gray-400">
+      <div class="image_container grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10">
+        <div v-for="image in gallery" :key="image.id" class="image rounded-[16px]">
+          <img :src="image.image" :alt="`Image number ${image.id}`"
+            class="w-full h-full size-fit object-cover rounded-[16px]">
+        </div>
+      </div>
+
+      <div class="load_more_button mt-12 text-center">
+        <button type="button" aria-label="Load more button"
+          class="load_more bg-gray-800 rounded-full py-3 min-w-[150px] text-gray-50 text-center font-[500]">Load
+          More</button>
+      </div>
+    </section>
   </main>
 </template>
 
 <script setup lang="ts">
 import header_image from "@/assets/gallery/01.jpg";
+import { gallery } from "@/utils/gallery";
 
 </script>
 
