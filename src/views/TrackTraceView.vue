@@ -3,7 +3,7 @@
     <!-- Hero Section -->
     <section class="gallery_header_section relative flex items-center justify-center min-h-[100vh]">
       <header
-        class="hero_section relative min-h-[120vh] w-full flex lg:justify-end md:justify-center justify-center flex-col lg:px-10 md:px-5 px-4 pb-16 rounded-[32px]">
+        class="hero_section relative min-h-[150vh] w-full flex lg:justify-end md:justify-center justify-center flex-col lg:px-10 md:px-5 px-4 pb-16 rounded-[32px] pt-40">
 
         <!-- Background Image -->
         <div class="bg_image absolute top-0 left-0 w-full h-full">
@@ -18,28 +18,10 @@
         </div>
 
         <!-- Tracking Form -->
-        <div
-          class="tracking_form z-10 lg:max-w-[900px] w-full mx-auto rounded-[8px] bg-white shadow-[0px_2px_15px_rgba(150,150,150,0.1)] py-10 lg:px-16 md:px-8 px-4 mt-20">
-          <form class="cargo_details flex flex-col gap-6 mt-2">
-            <div class="bill_lading_number flex flex-col w-full">
-              <label for="bill_lading_number" class="text-[#1E1E1E] font-[500] mb-3 lg:text-[18px] text-[16px]">Enter
-                your BL number to view full
-                tracking details.</label>
-              <input class="mt-2 border border-slate-[200] h-[55px] py-1 pl-4 rounded-[6px] placeholder:text-[14px]"
-                type="text" name="bill_lading_number" id="bill_lading_number" placeholder="Enter bill of lading number"
-                v-model="bl_number" />
-              <p class="text-[14px] mt-1">Comment is being given</p>
-            </div>
+        <SearchFormComponent />
 
-            <div class="cargo_btn flex items-center gap-6">
-              <button @click.prevent="handleSubmit" aria-label="Submit button" type="submit"
-                class="rounded-full border bg-efl-blue-80 w-[120px] h-[50px] flex items-center justify-center text-white font-[500]">
-                <span v-if="loading" class="animate-spin w-5 h-5 border-x-2 border-white rounded-full"></span>
-                <span v-else>Track</span>
-              </button>
-            </div>
-          </form>
-        </div>
+        <!-- Search Result -->
+        <SearchResultComponent />
       </header>
     </section>
 
@@ -93,23 +75,15 @@
 </template>
 
 <script setup lang="ts">
-import { ref, type Ref } from "vue";
 import header_image from "@/assets/track-trace/01.png";
 import image_one from "@/assets/track-trace/02.png";
 import image_two from "@/assets/track-trace/03.png";
 import image_three from "@/assets/track-trace/04.png";
 import FAQComponent from "@/components/FAQComponent.vue";
 import { questions } from "@/utils/questions";
+import SearchFormComponent from "@/components/SearchFormComponent.vue";
+import SearchResultComponent from "@/components/SearchResultComponent.vue";
 
-
-// Refs/Variables
-const bl_number: Ref<string> = ref("");
-const loading: Ref<boolean> = ref(false);
-
-// Functions
-const handleSubmit = () => {
-  console.log(bl_number.value);
-}
 </script>
 
 <style scoped></style>
