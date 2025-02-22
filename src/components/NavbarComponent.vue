@@ -12,7 +12,7 @@
           <ul class="flex flex-wrap gap-3 border border-gray-100 shadow-sm h-full rounded-full items-center">
             <li v-for="(link, index) in nav_links" :key="index">
               <RouterLink class="block bg-gray-50 text-gray-950 py-3 px-6 rounded-full mx-[1px] font-[500]"
-                :class="{ 'text-white bg-[#101d6a]': route.path == link.path }" :to="link.path">{{
+                :class="{ 'active': route.path == link.path }" :to="link.path">{{
                   link.name
                 }}
               </RouterLink>
@@ -77,4 +77,9 @@ const route = useRoute();
 console.log(route.path);
 </script>
 
-<style scoped></style>
+<style scoped>
+.active {
+  background-color: #101d6a;
+  color: white;
+}
+</style>

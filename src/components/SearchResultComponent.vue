@@ -2,7 +2,7 @@
   <div class="tracking_form z-10 w-full rounded-[8px] py-10 mt-20 grid lg:grid-cols-3 grid-cols-1 lg:gap-6 gap-y-6">
 
     <!-- BL Number Filter Section -->
-    <section class="bl_number_filter_container border shadow-sm bg-white col-span-1 rounded-[16px] p-10 border-red-500">
+    <section class="bl_number_filter_container border shadow-sm bg-white col-span-1 rounded-[16px] p-10">
       <header class="header py-6 border-b border-gray-400">
         <h3 class="font-[500] text-[20px] mb-2">BL0123456789</h3>
         <button type="button" aria-label="Edit Bl number button" class="text-efl-blue-80 flex items-center gap-3">Edit
@@ -11,7 +11,8 @@
       </header>
 
       <div class="container_input border-b border-gray-400 py-7">
-        <input type="text" class="input border border-gray-300 w-full h-[45px] px-3 rounded-[5px]"
+        <input type="text"
+          class="input border border-gray-400 shadow-sm w-full h-[45px] px-3 rounded-[5px] outline-none"
           placeholder="Enter container number" />
         <p class="comment text-sm mt-1 text-gray-700">Comment is being given</p>
         <button type="button" aria-label="Search for container number button"
@@ -24,8 +25,8 @@
 
         <div class="status_filter">
           <label for="status" class="font-[500]">Status</label>
-          <div class="filter border pr-4 h-[45px] flex items-center rounded-[5px] mt-2 mb-5">
-            <select class="w-full bg-white h-full rounded-[5px] pl-4" name="status" id="status">
+          <div class="filter border border-gray-400 shadow-sm pr-4 h-[45px] flex items-center rounded-[5px] mt-2 mb-5">
+            <select class="w-full bg-white h-full outline-none rounded-[5px] pl-4" name="status" id="status">
               <option value="all">All Status</option>
               <option value="confirmed">Confirmed</option>
               <option value="pending">Pending</option>
@@ -35,8 +36,9 @@
 
         <div class="flags_filter">
           <label for="flags" class="font-[500]">Flags</label>
-          <div class="filter border pr-4 h-[45px] flex items-center rounded-[5px] mt-2 mb-5">
-            <select class="w-full bg-white h-full rounded-[5px] pl-4" name="flags" id="flags">
+          <div
+            class="filter border border-gray-400 shadow-sm outline-none pr-4 h-[45px] flex items-center rounded-[5px] mt-2 mb-5">
+            <select class="w-full bg-white outline-none h-full rounded-[5px] pl-4" name="flags" id="flags">
               <option value="all">All Flags</option>
               <option value="confirmed">Confirmed</option>
               <option value="pending">Pending</option>
